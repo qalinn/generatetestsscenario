@@ -1,0 +1,57 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "title":"POST:/template/[templateId]",
+    "type":"object",
+    "properties":{
+        "autoPrint":{
+            "type" : "boolean"
+        },
+        "fileExtension":{
+            "minLength" : "1",
+            "maxLength" : "4",
+            "type" : "string"
+        },
+        "fileFieldDelimiter":{
+            "minLength" : "1",
+            "maxLength" : "2",
+            "type" : "string"
+        },
+        "fileIgnoreHeader":{
+            "type" : "boolean"
+        },
+        "includeFields":{
+            "type" : "object",
+            "properties":{
+                "templateField":{
+                    "type" : "array",
+                    "items": {
+                        "type" : "object",
+                        "properties":{
+                            "templateFieldId":{
+                                "minLength" : "1",
+                                "maxLength" : "200",
+                                "type" : "string"
+                            }
+                        },
+                        "required": ["templateFieldId"]
+                    }
+                }
+            },
+            "required": ["templateField"]
+        },
+        "isEnabled":{
+            "type" : "boolean"
+        },
+        "productFieldDelimiter":{
+            "minLength" : "1",
+            "maxLength" : "1",
+            "type" : "string"
+        },
+        "templateWorkingDirectory":{
+            "minLength" : "1",
+            "maxLength" : "200",
+            "type" : "string"
+        }
+    },
+    "required": ["autoPrint","fileExtension","fileFieldDelimiter","fileIgnoreHeader","includeFields","isEnabled","productFieldDelimiter","templateWorkingDirectory"]
+}

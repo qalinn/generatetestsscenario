@@ -15,9 +15,9 @@
         <version>20160212</version>
     </dependency>
     <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi</artifactId>
-        <version>3.13-beta1</version>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20151123</version>
     </dependency>
 </dependencies>
 
